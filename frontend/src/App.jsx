@@ -7,7 +7,7 @@ import {
 
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
-import Profile from "./pages/Profile";
+import Profile from "./pages/profile";
 import DocumentDetails from "./pages/DocumentDetails";
 import Admin from "./pages/Admin";
 
@@ -21,9 +21,8 @@ import Settings from "./pages/Settings";
 import Notifications from "./pages/Notifications";
 import QRVerify from "./pages/QRVerify";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-
+import Login from "./pages/login";
+import Register from "./pages/register";
 
 import "./App.css";
 
