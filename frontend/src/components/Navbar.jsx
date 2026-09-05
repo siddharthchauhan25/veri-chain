@@ -49,7 +49,7 @@ function Navbar() {
       if (!user.id) return;
 
       const response = await fetch(
-        `http://localhost:5000/api/notifications/${user.id}`
+        `${import.meta.env.VITE_API_URL}/api/notifications/${user.id}`
       );
 
       const data = await response.json();

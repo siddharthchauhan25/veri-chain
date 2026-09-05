@@ -18,7 +18,7 @@ function Documents() {
   const loadDocuments = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/documents/${user.id || 1}`
+        `${import.meta.env.VITE_API_URL}/api/documents/${user.id || 1}`
       );
 
       const data = await response.json();
@@ -53,7 +53,7 @@ function Documents() {
       formData.append("user_id", user.id || 1);
 
       const response = await fetch(
-        "http://localhost:5000/api/documents/upload",
+        `${import.meta.env.VITE_API_URL}/api/documents/upload`,
         {
           method: "POST",
           body: formData,

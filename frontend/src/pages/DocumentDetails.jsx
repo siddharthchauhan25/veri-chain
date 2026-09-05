@@ -22,7 +22,7 @@ function DocumentDetails() {
         const userId = user.id || 1;
 
         const response = await fetch(
-          `http://localhost:5000/api/documents/${userId}`
+          `${import.meta.env.VITE_API_URL}/api/documents/${userId}`
         );
 
         const data = await response.json();
@@ -59,7 +59,7 @@ function DocumentDetails() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/verify",
+        `${import.meta.env.VITE_API_URL}/api/verify`,
         {
           method: "POST",
           headers: {

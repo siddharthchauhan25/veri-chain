@@ -36,7 +36,7 @@ function Admin() {
   const loadStats = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/stats"
+        `${import.meta.env.VITE_API_URL}/api/admin/stats`
       );
 
       const data = await response.json();
@@ -54,7 +54,7 @@ function Admin() {
   const loadUsers = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/users"
+        `${import.meta.env.VITE_API_URL}/api/admin/users`
       );
 
       const data = await response.json();
@@ -72,7 +72,7 @@ function Admin() {
   const loadDocuments = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/documents"
+        `${import.meta.env.VITE_API_URL}/api/admin/users/${userId}/role`
       );
 
       const data = await response.json();
@@ -103,7 +103,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${userId}/role`,
+        `${import.meta.env.VITE_API_URL}/api/admin/users/${userId}/role`, 
         {
           method: "PUT",
           headers: {
@@ -176,7 +176,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${userId}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/users/${userId}`,
         {
           method: "DELETE",
         }
@@ -241,7 +241,7 @@ function Admin() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/verify",
+        `${import.meta.env.VITE_API_URL}/api/verify`,
         {
           method: "POST",
           headers: {

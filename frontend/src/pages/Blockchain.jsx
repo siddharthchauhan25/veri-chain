@@ -20,7 +20,7 @@ function Blockchain() {
         }
 
         const response = await fetch(
-          `http://localhost:5000/api/documents/${user.id}`
+          `${import.meta.env.VITE_API_URL}/api/documents/${user.id}`
         );
 
         const data = await response.json();

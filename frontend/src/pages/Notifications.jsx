@@ -11,7 +11,7 @@ function Notifications() {
   const loadNotifications = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notifications/${user.id || 1}`
+        `${import.meta.env.VITE_API_URL}/api/notifications/${user.id || 1}`
       );
 
       const data = await response.json();
@@ -33,7 +33,7 @@ function Notifications() {
   const markAsRead = async (id) => {
     try {
       await fetch(
-        `http://localhost:5000/api/notifications/${id}/read`,
+        `${import.meta.env.VITE_API_URL}/api/notifications/${id}/read`,
         {
           method: "PUT",
         }
@@ -48,7 +48,7 @@ function Notifications() {
   const markAllAsRead = async () => {
     try {
       await fetch(
-        `http://localhost:5000/api/notifications/user/${user.id || 1}/read-all`,
+        `${import.meta.env.VITE_API_URL}/api/notifications/user/${user.id || 1}/read-all`,
         {
           method: "PUT",
         }

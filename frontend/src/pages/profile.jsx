@@ -18,7 +18,7 @@ function Profile() {
     const loadDocuments = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/documents/${savedUser.id || 1}`
+          `${import.meta.env.VITE_API_URL}/api/documents/${savedUser.id || 1}`
         );
 
         const data = await response.json();
